@@ -2,7 +2,7 @@ let codiciSconto = ["YHDNU32, JANJC63, PWKCN25, SJDPO96, POCIE24"];
 
 
 
-function submit(event){
+function submitFun(event){
     console.log("entrato in funzione");
     event.preventDefault();
     costo = calcoloPrezzo();
@@ -20,7 +20,7 @@ function applicaSconto(prezzoBase, codiceInserito) {
             let indiceSconto = codiciSconto.indexOf(sconto);
             codiciSconto.splice(indiceSconto, 1);
             return prezzoScontato = prezzoBase * 0.75;
-        } else {
+        } else if(sconto != codiceInserito) {
             document.getElementById("DisCode").classList.add("text-danger")
             alert("CODICE SCONTO NON VALIDO O INESISTENTE");
             return prezzoBase;
