@@ -153,7 +153,7 @@
 
 
 
-                <form class="row">
+                <form class="row" onsubmit="clickFormSend(event)">
 
                     <div class="col-md-6 mb-3">
                         <label for="FirtsName" class="form-label">
@@ -184,11 +184,11 @@
                     </div>
 
                     <div class="col-md-6 mb-3">
-                        <label for="disabledSelect" class="form-label">Disabled select menu</label>
-                        <select id="disabledSelect" class="form-select">
-                            <option>Backed Development</option>
-                            <option>Frontend Development</option>
-                            <option>Project Analysis</option>
+                        <label for="Select" class="form-label">Type of work</label>
+                        <select id="Select" class="form-select">
+                            <option value="1">Backed Development</option>
+                            <option value="2">Frontend Development</option>
+                            <option value="3">Project Analysis</option>
                         </select>
                     </div>
 
@@ -210,13 +210,13 @@
 
                 <div class="row text-center">
                     <div class="col">
-                        <button class="btn btn-warning" type="button">Send</button>
+                        <button class="btn btn-warning" type="submit">Send</button>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col">
-                        <h3 class="mb-4">Il prezzo finale è di: 153.75</h3>
+                        <h3 class="mb-4" id="prezzo"></h3>
                     </div>
                 </div>
 
