@@ -2,10 +2,8 @@ let codiciSconto = ["YHDNU32, JANJC63, PWKCN25, SJDPO96, POCIE24"];
 
 
 
-
-
-
-function submit(event) {
+function submit(event){
+    console.log("entrato in funzione");
     event.preventDefault();
     costo = calcoloPrezzo();
     sconto = document.getElementById("DisCode").value;
